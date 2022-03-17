@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handling State</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="root"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      let img = document.querySelector(".img");
+      class Image extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            active: "basketball",
+          };
+        }
+
+        render() {
+          let labels = [
+            "tiger",
+            "basketball",
+            "pubg",
+            "laptop",
+            "cricket",
+            "phone",
+          ];
+          return (
+            <>
+              <main className="container">
+                <div className="box">
+                  {labels.map((label, i) => (
+                    <button
+                      key={i}
+                      className={this.state.active === label ? `active` : ""}
+                      onClick={() => {
+                        this.setState({
+                          active: label,
+                        });
+                      }}
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
+                <div className="img">
+                  <img
+                    src={`../assets/${this.state.active}.jpg`}
+                    alt={this.state.active}
+                  />
+                </div>
+              </main>
+            </>
+          );
+        }
+      }
+
+      ReactDOM.render(<Image />, document.querySelector(".root"));
+    </script>
+  </body>
+</html>
