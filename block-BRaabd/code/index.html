@@ -24,67 +24,43 @@
         constructor(props) {
           super(props);
           this.state = {
-            url: "../assets/tiger.jpg",
+            active: "basketball",
           };
         }
-        tiger = () => {
-          this.setState({
-            url: "../assets/tiger.jpg",
-          });
-        };
-        laptop = () => {
-          this.setState({
-            url: "../assets/laptop.jpg",
-          });
-        };
-        basketball = () => {
-          this.setState({
-            url: "../assets/basketball.jpg",
-          });
-        };
-        cricket = () => {
-          this.setState({
-            url: "../assets/cricket.jpg",
-          });
-        };
-        phone = () => {
-          this.setState({
-            url: "../assets/phone.jpg",
-          });
-        };
-        pubg = () => {
-          this.setState({
-            url: "../assets/pubg.jpeg",
-          });
-        };
 
         render() {
+          let labels = [
+            "tiger",
+            "basketball",
+            "pubg",
+            "laptop",
+            "cricket",
+            "phone",
+          ];
           return (
             <>
               <main className="container">
                 <div className="box">
-                  {[
-                    "Tiger",
-                    "Basketball",
-                    "PubG",
-                    "Laptop",
-                    "Cricket",
-                    "Phone",
-                  ].map((ele, i) => {
-                    ele = ele.toLocaleLowerCase();
-                    return (
-                      <button onClick={this[ele]} key={i}>
-                        {ele}
-                      </button>
-                    );
-                  })}
+                  {labels.map((label, i) => (
+                    <button
+                      key={i}
+                      className={this.state.active === label ? `active` : ""}
+                      onClick={() => {
+                        this.setState({
+                          active: label,
+                        });
+                      }}
+                    >
+                      {label}
+                    </button>
+                  ))}
                 </div>
-                <div
-                  className="img"
-                  style={{
-                    background: `url(${this.state.url}) center`,
-                  }}
-                ></div>
+                <div className="img">
+                  <img
+                    src={`../assets/${this.state.active}.jpg`}
+                    alt={this.state.active}
+                  />
+                </div>
               </main>
             </>
           );
