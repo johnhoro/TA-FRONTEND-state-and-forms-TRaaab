@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handling State</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="root"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      let img = document.querySelector(".img");
+      class Image extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            url: "../assets/tiger.jpg",
+          };
+        }
+        tiger = () => {
+          this.setState({
+            url: "../assets/tiger.jpg",
+          });
+        };
+        laptop = () => {
+          this.setState({
+            url: "../assets/laptop.jpg",
+          });
+        };
+        basketball = () => {
+          this.setState({
+            url: "../assets/basketball.jpg",
+          });
+        };
+        cricket = () => {
+          this.setState({
+            url: "../assets/cricket.jpg",
+          });
+        };
+        phone = () => {
+          this.setState({
+            url: "../assets/phone.jpg",
+          });
+        };
+        pubg = () => {
+          this.setState({
+            url: "../assets/pubg.jpeg",
+          });
+        };
+
+        render() {
+          return (
+            <>
+              <main className="container">
+                <div className="box">
+                  {[
+                    "Tiger",
+                    "Basketball",
+                    "PubG",
+                    "Laptop",
+                    "Cricket",
+                    "Phone",
+                  ].map((ele, i) => {
+                    ele = ele.toLocaleLowerCase();
+                    return (
+                      <button onClick={this[ele]} key={i}>
+                        {ele}
+                      </button>
+                    );
+                  })}
+                </div>
+                <div
+                  className="img"
+                  style={{
+                    background: `url(${this.state.url}) center`,
+                  }}
+                ></div>
+              </main>
+            </>
+          );
+        }
+      }
+
+      ReactDOM.render(<Image />, document.querySelector(".root"));
+    </script>
+  </body>
+</html>
