@@ -11,7 +11,6 @@ class Tag extends React.Component {
   }
   render() {
     let allCategories = data.map((food) => food.category);
-    // console.log(loadash.unique(allCategories));
     console.log(allCategories);
     let categories = allCategories.filter(
       (category, i, array) => array.indexOf(category) === i
@@ -27,8 +26,8 @@ class Tag extends React.Component {
       );
     }
     return (
-      <div className="border">
-        <header className="flex justify-center">
+      <div className="container">
+        <header className="header">
           {categories.map((category, i) => {
             console.log(category);
             return (
@@ -47,8 +46,8 @@ class Tag extends React.Component {
             );
           })}
         </header>
-        <main className="p-12">
-          <section className="flex justify-between flex-wrap">
+        <main className="main">
+          <section className="all-article">
             <Menu allProducts={allProducts} />
           </section>
         </main>

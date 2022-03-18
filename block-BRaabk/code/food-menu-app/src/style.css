@@ -1,14 +1,215 @@
-button {
-  border: 1px;
-  background: green;
-  color: white;
-  padding: 5px;
-  margin-right: 10px;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-.active {
-  background: rgb(221, 61, 12);
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-.border {
-  border: 1px solid red;
+/* GENERAL STYLE */
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-style: italic;
+  font-weight: bold;
+}
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  color: rgb(185, 158, 2);
+  padding: 5px;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: rgb(185, 158, 2);
+  border-radius: 5px;
+  color: white;
+}
+.active {
+  border-radius: 5px;
+  border: 1px solid rgb(185, 158, 2);
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(233, 247, 229);
+}
+
+.main {
+  display: flex;
+}
+
+h4 {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 0.6rem;
+}
+.all-article {
+  margin: 1rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+}
+article {
+  margin-left: 2.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 45%;
+  display: flex;
+}
+img {
+  width: 300px;
+  height: 200px;
+  border: 4px solid gold;
+}
+
+.product-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed red;
+  margin-bottom: 1rem;
+}
+
+.product-box {
+  margin-left: 1rem;
+}
+p {
+  line-height: 1.5;
+  font-weight: 400;
 }
