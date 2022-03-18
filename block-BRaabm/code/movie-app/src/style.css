@@ -1,0 +1,49 @@
+.card {
+  position: relative;
+  border: 1px solid rebeccapurple;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1000px;
+}
+.card button {
+  display: none;
+  position: absolute;
+  top: 35%;
+  left: 35%;
+}
+.card:hover button {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+
+.movie {
+  border: 1px solid red;
+}
+
+img {
+  width: 400px;
+}
+
+/* .card {
+  border: 1px solid black;
+  width: 500px;
+  padding: 1rem;
+  background-color: antiquewhite;
+  margin: 1rem;
+} */
+
+main {
+  border: 1px solid royalblue;
+  display: flex;
+}
+.show {
+  border: 1px solid green;
+}
+
+.single-card {
+  border: 1px solid rosybrown;
+  width: 30%;
+}
