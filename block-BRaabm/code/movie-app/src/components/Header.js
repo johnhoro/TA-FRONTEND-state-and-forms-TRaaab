@@ -1,8 +1,10 @@
 function Header() {
   return (
-    <header>
-      <h1>Movie App</h1>
-    </header>
+    <>
+      <header>
+        <h1>Movies-App</h1>
+      </header>
+    </>
   );
 }
 

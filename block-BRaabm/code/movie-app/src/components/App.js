@@ -1,15 +1,13 @@
 import Header from "./Header";
-import Card from "./Card";
-import "../style.css";
+import MovieList from "./MovieList";
 
 function App() {
   return (
     <>
       <Header />
-      <main>
-        <Card />
-      </main>
+      <MovieList />
     </>
   );
 }
+
 export default App;
