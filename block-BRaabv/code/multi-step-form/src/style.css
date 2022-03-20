@@ -1,0 +1,129 @@
+body {
+  background-color: antiquewhite;
+}
+
+.form-img img {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.active {
+  background: rgb(93, 68, 233);
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+}
+.form-control {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+.image-option {
+  margin-right: 20px;
+}
+/* HIDE RADIO */
+.image-option [type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type="radio"] + img {
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* CHECKED STYLES */
+[type="radio"]:checked + img {
+  outline: 1px solid blue;
+}
+
+.flex {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+
+.masterForm {
+  max-width: 1000px;
+  width: 100%;
+  margin: 5rem auto;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  height: 500px;
+  background-color: white;
+}
+.main {
+  width: 65%;
+}
+
+h3 {
+  margin-right: 1rem;
+}
+
+.header {
+  border-bottom: 1px solid green;
+  margin-left: 1.5rem;
+}
+p {
+  margin-left: 1.5rem;
+}
+
+.step {
+  padding: 1.5rem;
+}
+
+.step-3 h2 {
+  margin-top: 0;
+}
+.form {
+  /* width: 100%; */
+  background-color: royalblue;
+  justify-content: space-between;
+}
+
+.w-50 {
+  width: 48%;
+}
+
+.w-100 {
+  width: 100%;
+}
+.warp {
+  flex-wrap: wrap;
+}
+
+label {
+  display: flex;
+
+  margin-bottom: 1rem;
+}
+
+.margin-right {
+  margin-right: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin-left: 1.5rem;
+}
+
+.select-img {
+  border: 1px solid blue;
+  border-radius: 10px;
+}
+.select-img img {
+  width: 175px;
+}
+.step-3 {
+  margin-left: 1.5rem;
+}
+
+.btn-submit {
+  margin-left: 0;
+}
