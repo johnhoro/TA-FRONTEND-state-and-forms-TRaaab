@@ -1,0 +1,304 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* GENERAL STYLE */
+body {
+  line-height: 1.5;
+}
+
+.flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+.item-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.aside {
+  width: 20%;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.aside span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.aside button {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  margin: 0.7rem;
+}
+
+.header {
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.all-product {
+  width: 80%;
+}
+
+.product {
+  width: 23%;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.product img {
+  width: 200px;
+}
+.title {
+  padding: 1rem 0;
+}
+
+.price {
+  border-top: 1px solid gold;
+  padding: 0.2rem;
+  width: 2rem;
+
+  margin: 0.8rem auto;
+}
+
+.product button {
+  padding: 10px 30px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Cart */
+
+.display {
+  display: block;
+}
+.none {
+  display: none;
+}
+
+.cart {
+  background-color: rgb(39, 39, 39);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+}
+.cart img {
+  padding: 1rem;
+}
+.cart-close {
+  width: 400px;
+  background-color: rgb(39, 39, 39);
+}
+.cart-close h3 {
+  font-size: 1.7rem;
+  margin-left: 40%;
+  color: white;
+}
+
+.cart-item {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: rgb(39, 39, 39);
+  color: white;
+}
+.cart-item img {
+  width: 90px;
+  padding: 0;
+}
+.cart-imgs img {
+  background-color: black;
+}
+
+.btn-delete button {
+  background-color: rgb(39, 39, 39);
+  cursor: pointer;
+  border: none;
+}
+
+.prices p {
+  color: goldenrod;
+}
+.prices button {
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.scroll {
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.checkout {
+  position: fixed;
+  bottom: 1rem;
+  color: white;
+}
+.checkout div {
+  padding: 2rem;
+}
+.checkout p {
+  color: gold;
+}
+
+.checkout button {
+  width: 400px;
+  padding: 1rem;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
